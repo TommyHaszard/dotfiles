@@ -1,0 +1,77 @@
+{
+  "plugins": {
+    "cmp-nvim-lsp": {
+      "rev": "bd5a7d6",
+      "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
+    },
+    "lua-async-await": {
+      "rev": "652d94d",
+      "src": "https://github.com/nvim-java/lua-async-await"
+    },
+    "mason-lspconfig.nvim": {
+      "rev": "1d77bd8",
+      "src": "https://github.com/mason-org/mason-lspconfig.nvim"
+    },
+    "mason.nvim": {
+      "rev": "ad7146a",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "nui.nvim": {
+      "rev": "de74099",
+      "src": "https://github.com/MunifTanjim/nui.nvim"
+    },
+    "nvim-cmp": {
+      "rev": "a7bcf1d",
+      "src": "https://github.com/hrsh7th/nvim-cmp"
+    },
+    "nvim-dap": {
+      "rev": "6782b09",
+      "src": "https://github.com/mfussenegger/nvim-dap"
+    },
+    "nvim-java": {
+      "rev": "3d56b74",
+      "src": "https://github.com/nvim-java/nvim-java"
+    },
+    "nvim-java-core": {
+      "rev": "229ebcd",
+      "src": "https://github.com/nvim-java/nvim-java-core"
+    },
+    "nvim-java-dap": {
+      "rev": "55f2395",
+      "src": "https://github.com/nvim-java/nvim-java-dap"
+    },
+    "nvim-java-refactor": {
+      "rev": "b51a57d",
+      "src": "https://github.com/nvim-java/nvim-java-refactor"
+    },
+    "nvim-java-test": {
+      "rev": "7f0f40e",
+      "src": "https://github.com/nvim-java/nvim-java-test"
+    },
+    "nvim-jdtls": {
+      "rev": "380ac14",
+      "src": "https://github.com/mfussenegger/nvim-jdtls"
+    },
+    "nvim-lspconfig": {
+      "rev": "2b52bc2",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-treesitter": {
+      "rev": "645f42e8",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    },
+    "oil.nvim": {
+      "rev": "7e1cd77",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "plenary.nvim": {
+      "rev": "b9fd522",
+      "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "vague.nvim": {
+      "rev": "5689afd",
+      "src": "https://github.com/vague2k/vague.nvim"
+    }
+  }
+}
