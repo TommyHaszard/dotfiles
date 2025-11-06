@@ -13,11 +13,6 @@ vim.o.winborder = "rounded"
 
 vim.g.mapleader = " "
 
-vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
-vim.keymap.set({'n', 'v', 'x'}, '<leader>y', '"+y<CR>')
-vim.keymap.set({'n', 'v', 'x'}, '<leader>p', '"+p<CR>')
-
 vim.pack.add({
 	{ src = "https://github.com/vague2k/vague.nvim" },
 	{ src = "https://github.com/stevearc/oil.nvim" },
@@ -33,6 +28,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-lua/plenary.nvim" },
 })
 
+
 require "mason".setup()
 require "mason-lspconfig".setup {
 	automatic_enable = {
@@ -42,7 +38,6 @@ require "mason-lspconfig".setup {
 	}
 }
 
-local map = vim.keymap.set
 
 local telescope = require("telescope")
 telescope.setup({
@@ -67,23 +62,6 @@ telescope.setup({
 })
 telescope.load_extension("ui-select")
 
-local builtin = require('telescope.builtin')
-map('n', '<leader>f', builtin.find_files, { desc = 'Telescope find files' })
-map({ "n" }, "<leader>g", builtin.live_grep)
-map({ "n" }, "<leader>sb", builtin.buffers)
-map({ "n" }, "<leader>si", builtin.grep_string)
-map({ "n" }, "<leader>so", builtin.oldfiles)
-map({ "n" }, "<leader>sh", builtin.help_tags)
-map({ "n" }, "<leader>sm", builtin.man_pages)
-map({ "n" }, "<leader>sr", builtin.lsp_references)
-map({ "n" }, "<leader>sd", builtin.diagnostics)
-map({ "n" }, "<leader>si", builtin.lsp_implementations)
-map({ "n" }, "<leader>sT", builtin.lsp_type_definitions)
-map({ "n" }, "<leader>ss", builtin.current_buffer_fuzzy_find)
-map({ "n" }, "<leader>st", builtin.builtin)
-map({ "n" }, "<leader>sc", builtin.git_bcommits)
-map({ "n" }, "<leader>sk", builtin.keymaps)
-
 vim.lsp.enable({ "lua_ls" })
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "java",
@@ -93,3 +71,5 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.cmd("colorscheme vague")
+
+require('keymaps')
