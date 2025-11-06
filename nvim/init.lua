@@ -15,6 +15,7 @@ vim.g.mapleader = " "
 
 vim.pack.add({
 	{ src = "https://github.com/vague2k/vague.nvim" },
+	{ src = "https://github.com/ribru17/bamboo.nvim" },
 	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
@@ -70,6 +71,6 @@ vim.api.nvim_create_autocmd("FileType", {
     end
 })
 
-vim.cmd("colorscheme vague")
+vim.cmd("colorscheme bamboo")
 
 require('keymaps')

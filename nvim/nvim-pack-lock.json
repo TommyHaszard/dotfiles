@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "bamboo.nvim": {
+      "rev": "6ec224a",
+      "src": "https://github.com/ribru17/bamboo.nvim"
+    },
     "cmp-nvim-lsp": {
       "rev": "bd5a7d6",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"

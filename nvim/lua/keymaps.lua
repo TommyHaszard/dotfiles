@@ -7,11 +7,14 @@ map('n', '<leader>fq', ':%s/^.*$/\'\\0\',/<CR>', {
 })
 
 map('n', '<leader>o', ':update<CR> :source<CR>')
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
-vim.keymap.set({'n', 'v', 'x'}, '<leader>y', '"+y<CR>')
-vim.keymap.set({'n', 'v', 'x'}, '<leader>p', '"+p<CR>')
+map('n', '<leader>lf', vim.lsp.buf.format)
+map('n', '<leader>sd', ':e .<CR>', { desc = 'Open current dir in'})
+map({'n', 'v', 'x'}, '<leader>y', '"+y<CR>')
+map({'n', 'v', 'x'}, '<leader>p', '"+p<CR>')
+map({'n', 'v', 'x'}, '<leader>p', '"+p<CR>')
+map({'n', 'v', 'x'}, '<leader>w', ':update')
 
-vim.keymap.set('n', '<leader>ya', 'gg"+yG``', {
+map('n', '<leader>ya', 'gg"+yG``', {
   desc = 'Yank entire file to clipboard',
   silent = true
 })
@@ -25,7 +28,7 @@ map({ "n" }, "<leader>so", builtin.oldfiles)
 map({ "n" }, "<leader>sh", builtin.help_tags)
 map({ "n" }, "<leader>sm", builtin.man_pages)
 map({ "n" }, "<leader>sr", builtin.lsp_references)
-map({ "n" }, "<leader>sd", builtin.diagnostics)
+map({ "n" }, "<leader>sD", builtin.diagnostics)
 map({ "n" }, "<leader>si", builtin.lsp_implementations)
 map({ "n" }, "<leader>sT", builtin.lsp_type_definitions)
 map({ "n" }, "<leader>ss", builtin.current_buffer_fuzzy_find)
