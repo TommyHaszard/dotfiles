@@ -4,6 +4,10 @@
       "rev": "6ec224a",
       "src": "https://github.com/ribru17/bamboo.nvim"
     },
+    "blink.cmp": {
+      "rev": "40380e7",
+      "src": "https://github.com/Saghen/blink.cmp"
+    },
     "cmp-nvim-lsp": {
       "rev": "bd5a7d6",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
@@ -72,6 +76,10 @@
     "plenary.nvim": {
       "rev": "b9fd522",
       "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "telescope-ssh-config": {
+      "rev": "a0d464f",
+      "src": "https://github.com/jsongerber/telescope-ssh-config"
     },
     "telescope-ui-select.nvim": {
       "rev": "6e51d7d",
