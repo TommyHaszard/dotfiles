@@ -12,6 +12,10 @@
       "rev": "bd5a7d6",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
     },
+    "gitsigns.nvim": {
+      "rev": "20ad441",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
     "lua-async-await": {
       "rev": "652d94d",
       "src": "https://github.com/nvim-java/lua-async-await"
@@ -27,6 +31,10 @@
     "nui.nvim": {
       "rev": "de74099",
       "src": "https://github.com/MunifTanjim/nui.nvim"
+    },
+    "nvim-autopairs": {
+      "rev": "7a2c97c",
+      "src": "https://github.com/windwp/nvim-autopairs"
     },
     "nvim-cmp": {
       "rev": "a7bcf1d",
@@ -88,6 +96,10 @@
     "telescope.nvim": {
       "rev": "84b9ba0",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
+    },
+    "tiny-inline-diagnostic.nvim": {
+      "rev": "63dd87d",
+      "src": "https://github.com/rachartier/tiny-inline-diagnostic.nvim"
     },
     "vague.nvim": {
       "rev": "5689afd",

@@ -28,6 +28,9 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-telescope/telescope-ui-select.nvim" },
 	{ src = "https://github.com/nvim-lua/plenary.nvim" },
 	{ src = "https://github.com/jsongerber/telescope-ssh-config" },
+	{ src = "https://github.com/windwp/nvim-autopairs" },
+	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
+	{ src = "https://github.com/rachartier/tiny-inline-diagnostic.nvim" },
 })
 
 local pm = require("plugin_manager")
@@ -41,9 +44,11 @@ require "mason-lspconfig".setup {
 		}
 	}
 }
-
+require("nvim-autopairs").setup()
 require("oil").setup()
 require("blink.cmp").setup()
+require("gitsigns").setup()
+require("tiny-inline-diagnostic").setup()
 
 local telescope = require("telescope")
 telescope.setup({
@@ -107,3 +112,6 @@ vim.api.nvim_create_user_command('LazyGit', function()
 end, {})
 
 vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { desc = 'LazyGit' })
+
+vim.keymap.set('n', '<leader>hn', ':Gitsigns next_hunk<CR>', { desc = 'Gitsigns jump to next hunk' })
+vim.keymap.set('n', '<leader>hp', ':Gitsigns next_hunk<CR>', { desc = 'Gitsigns jump to next hunk' })
