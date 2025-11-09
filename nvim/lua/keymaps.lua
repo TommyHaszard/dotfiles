@@ -19,8 +19,8 @@ map('n', '<leader>ya', 'gg"+yG``', {
 })
 
 local builtin = require('telescope.builtin')
-map('n', '<leader>f', builtin.find_files, { desc = 'Telescope find files' })
-map({ "n" }, "<leader>g", builtin.live_grep)
+map('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+map({ "n" }, "<leader>sg", builtin.live_grep)
 map({ "n" }, "<leader>sb", builtin.buffers)
 map({ "n" }, "<leader>si", builtin.grep_string)
 map({ "n" }, "<leader>so", builtin.oldfiles)
