@@ -31,6 +31,15 @@ vim.pack.add({
 	{ src = "https://github.com/windwp/nvim-autopairs" },
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 	{ src = "https://github.com/rachartier/tiny-inline-diagnostic.nvim" },
+	{ src = "https://github.com/MunifTanjim/nui.nvim" },
+	{ src = "https://github.com/kndndrj/nvim-dbee" },
+	{ src = "https://github.com/nvim-java/lua-async-await" },
+	{ src = "https://github.com/mfussenegger/nvim-dap" },
+ -- { src = "https://github.com/nvim-java/nvim-java-core" },
+ --	{ src = "https://github.com/nvim-java/nvim-java-refactor" },
+ -- { src = "https://github.com/nvim-java/nvim-java-test" },
+ -- { src = "https://github.com/nvim-java/nvim-java-dap" },
+ --	{ src = "https://github.com/nvim-java/nvim-java" },
 })
 
 local pm = require("plugin_manager")
@@ -44,11 +53,19 @@ require "mason-lspconfig".setup {
 		}
 	}
 }
+
+-- require('java').setup()
+-- vim.lsp.config("jdtls", {})
+-- require('jdtls_setup').setup({})
+
 require("nvim-autopairs").setup()
 require("oil").setup()
 require("blink.cmp").setup()
 require("gitsigns").setup()
 require("tiny-inline-diagnostic").setup()
+-- require("nui").setup()
+--require("dbee").install()
+require("dbee").setup()
 
 local telescope = require("telescope")
 telescope.setup({
@@ -77,7 +94,7 @@ vim.lsp.enable({ "lua_ls" })
 vim.api.nvim_create_autocmd("FileType", {
     pattern = "java",
     callback = function()
-        require('jdtls_setup').setup()
+    	require('jdtls_setup').setup({})
     end
 })
 

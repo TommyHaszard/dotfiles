@@ -44,6 +44,10 @@
       "rev": "6782b09",
       "src": "https://github.com/mfussenegger/nvim-dap"
     },
+    "nvim-dbee": {
+      "rev": "dda5176",
+      "src": "https://github.com/kndndrj/nvim-dbee"
+    },
     "nvim-java": {
       "rev": "3d56b74",
       "src": "https://github.com/nvim-java/nvim-java"
