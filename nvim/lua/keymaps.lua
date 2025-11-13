@@ -34,3 +34,4 @@ map({ "n" }, "<leader>sf", builtin.current_buffer_fuzzy_find, { desc = 'Telescop
 map({ "n" }, "<leader>sT", builtin.builtin, { desc = 'Telescope builtin search' })
 map({ "n" }, "<leader>sc", builtin.git_bcommits, { desc = 'Telescope git bcommits' })
 map({ "n" }, "<leader>sk", builtin.keymaps, { desc = 'Telescope search keymaps' })
+map("n", "<leader>fb", ":Telescope file_browser path=%:p:h select_buffer=true<CR>")

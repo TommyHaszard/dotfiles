@@ -16,6 +16,10 @@
       "rev": "20ad441",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
+    "kanagawa.nvim": {
+      "rev": "aef7f5c",
+      "src": "https://github.com/rebelot/kanagawa.nvim"
+    },
     "lua-async-await": {
       "rev": "652d94d",
       "src": "https://github.com/nvim-java/lua-async-await"
@@ -28,9 +32,17 @@
       "rev": "ad7146a",
       "src": "https://github.com/mason-org/mason.nvim"
     },
+    "monokai-pro.nvim": {
+      "rev": "1ac671f",
+      "src": "https://github.com/loctvl842/monokai-pro.nvim"
+    },
     "nui.nvim": {
       "rev": "de74099",
       "src": "https://github.com/MunifTanjim/nui.nvim"
+    },
+    "nvim": {
+      "rev": "234fc04",
+      "src": "https://github.com/catppuccin/nvim"
     },
     "nvim-autopairs": {
       "rev": "7a2c97c",
@@ -88,6 +100,10 @@
     "plenary.nvim": {
       "rev": "b9fd522",
       "src": "https://github.com/nvim-lua/plenary.nvim"
+    },
+    "telescope-file-browser.nvim": {
+      "rev": "3610dc7",
+      "src": "https://github.com/nvim-telescope/telescope-file-browser.nvim"
     },
     "telescope-ssh-config": {
       "rev": "a0d464f",
