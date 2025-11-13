@@ -17,13 +17,12 @@ vim.pack.add({
 	{ src = "https://github.com/vague2k/vague.nvim" },
 	{ src = "https://github.com/ribru17/bamboo.nvim" },
 	{ src = "https://github.com/stevearc/oil.nvim" },
-	{ src = "https://github.com/nvim-treesitter/nvim-treesitter",        version = "main" },
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter",           version = "main" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 	{ src = "https://github.com/mason-org/mason.nvim" },
 	{ src = "https://github.com/mason-org/mason-lspconfig.nvim" },
 	{ src = "https://github.com/hrsh7th/nvim-cmp" },
 	{ src = "https://github.com/hrsh7th/cmp-nvim-lsp" },
-	--	{ src = "https://github.com/mfussenegger/nvim-jdtls" },
 	{ src = "https://github.com/nvim-telescope/telescope.nvim" },
 	{ src = "https://github.com/nvim-telescope/telescope-ui-select.nvim" },
 	{ src = "https://github.com/nvim-lua/plenary.nvim" },
@@ -40,6 +39,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-java/nvim-java-test" },
 	{ src = "https://github.com/nvim-java/nvim-java-dap" },
 	{ src = "https://github.com/nvim-java/nvim-java" },
+	{ src = "https://github.com/nvim-telescope/telescope-file-browser.nvim" },
 })
 
 local pm = require("plugin_manager")
@@ -81,7 +81,6 @@ require("oil").setup()
 require("blink.cmp").setup()
 require("gitsigns").setup()
 require("tiny-inline-diagnostic").setup()
--- require("nui").setup()
 --require("dbee").install()
 require("dbee").setup()
 
@@ -99,32 +98,82 @@ telescope.setup({
 			"┐", -- top-right
 			"┘", -- bottom-right
 			"└", -- bottom-left
-},
+		},
 		path_displays = { "smart" },
 		layout_config = {
 			prompt_position = "top",
 		}
+	},
+	pickers = {
+		find_files = {
+			mappings = {
+				i = {
+					["<CR>"] = "select_tab",
+				},
+				n = {
+					["<CR>"] = "select_tab",
+				},
+			},
+		},
+		buffers = {
+			mappings = {
+				i = {
+					["<CR>"] = "select_tab",
+				},
+				n = {
+					["<CR>"] = "select_tab",
+				},
+			},
+		},
+		oldfiles = {
+			mappings = {
+				i = {
+					["<CR>"] = "select_tab",
+				},
+				n = {
+					["<CR>"] = "select_tab",
+				},
+			},
+		},
+		man_pages = {
+			mappings = {
+				i = {
+					["<CR>"] = "select_tab",
+				},
+				n = {
+					["<CR>"] = "select_tab",
+				},
+			},
+		}, 
+     help_tags = {
+			mappings = {
+				i = {
+					["<CR>"] = "select_tab",
+				},
+				n = {
+					["<CR>"] = "select_tab",
+				},
+			},
+		}
 	}
 })
 telescope.load_extension("ui-select")
+telescope.load_extension("file_browser")
 
 vim.lsp.enable({ "lua_ls" })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "java",
-  callback = function()
-    vim.bo.autoindent = false
-    vim.bo.smartindent = false
-    vim.bo.cindent = false
+	pattern = "java",
+	callback = function()
+		vim.bo.autoindent = false
+		vim.bo.smartindent = false
+		vim.bo.cindent = false
 
-    vim.bo.tabstop = 4
-    vim.bo.shiftwidth = 4
-    vim.bo.expandtab = true
-  end,
+		vim.bo.tabstop = 4
+		vim.bo.shiftwidth = 4
+		vim.bo.expandtab = true
+	end,
 })
-
-
-
 
 vim.cmd("colorscheme bamboo")
 
