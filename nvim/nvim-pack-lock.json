@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "LuaSnip": {
+      "rev": "3732756",
+      "src": "https://github.com/L3MON4D3/LuaSnip"
+    },
     "bamboo.nvim": {
       "rev": "6ec224a",
       "src": "https://github.com/ribru17/bamboo.nvim"
@@ -8,13 +12,29 @@
       "rev": "40380e7",
       "src": "https://github.com/Saghen/blink.cmp"
     },
+    "cmp-buffer": {
+      "rev": "b74fab3",
+      "src": "https://github.com/hrsh7th/cmp-buffer"
+    },
+    "cmp-dbee": {
+      "rev": "1650f67",
+      "src": "https://github.com/MattiasMTS/cmp-dbee"
+    },
     "cmp-nvim-lsp": {
       "rev": "bd5a7d6",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
     },
+    "cmp-path": {
+      "rev": "c642487",
+      "src": "https://github.com/hrsh7th/cmp-path"
+    },
     "gitsigns.nvim": {
       "rev": "20ad441",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
+    "gruber-darker.nvim": {
+      "rev": "98a2e14",
+      "src": "https://github.com/blazkowolf/gruber-darker.nvim"
     },
     "kanagawa.nvim": {
       "rev": "aef7f5c",
@@ -23,6 +43,10 @@
     "lua-async-await": {
       "rev": "652d94d",
       "src": "https://github.com/nvim-java/lua-async-await"
+    },
+    "markview.nvim": {
+      "rev": "86fcabc",
+      "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "mason-lspconfig.nvim": {
       "rev": "1d77bd8",
@@ -35,6 +59,10 @@
     "monokai-pro.nvim": {
       "rev": "1ac671f",
       "src": "https://github.com/loctvl842/monokai-pro.nvim"
+    },
+    "monokai_remastered.nvim": {
+      "rev": "2431b06",
+      "src": "https://github.com/njorquera98/monokai_remastered.nvim"
     },
     "nui.nvim": {
       "rev": "de74099",

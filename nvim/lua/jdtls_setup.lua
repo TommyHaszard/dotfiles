@@ -7,7 +7,6 @@ function M:setup()
 	local os_name = vim.loop.os_uname().sysname
 	local arch = vim.loop.os_uname().machine
 
-	-- Create workspace directory
 	vim.fn.mkdir(workspace_dir, "p")
 
 	local jdtls_path = data_path .. sep .. "mason" .. sep .. "packages" .. sep .. "jdtls"
@@ -44,6 +43,18 @@ function M:setup()
 		print("Using format file: " .. format_file)
 	end
 
+	local bundles = {}
+
+	local java_debug_path = vim.fn.stdpath('data') .. '/mason/packages/java-debug-adapter/extension/server/'
+	if vim.fn.isdirectory(java_debug_path) == 1 then
+		vim.list_extend(bundles, vim.split(vim.fn.glob(java_debug_path .. '*.jar'), '\n'))
+	end
+
+	local java_test_path = vim.fn.stdpath('data') .. '/mason/packages/java-test/extension/server/'
+	if vim.fn.isdirectory(java_test_path) == 1 then
+		vim.list_extend(bundles, vim.split(vim.fn.glob(java_test_path .. '*.jar'), '\n'))
+	end
+
 	local config = {
 		cmd = {
 			"/opt/homebrew/opt/openjdk@21/bin/java",
@@ -75,35 +86,37 @@ function M:setup()
 				format = {
 					enabled = true,
 					settings = {
-						-- Use file:// protocol
 						url = "file://" .. format_file,
 						profile = "Default",
 					},
-					-- Add inline format settings
-					tabSize = 16,
-					insertSpaces = true,
 				},
-				-- Try inline settings as backup
 				configuration = {
 					updateBuildConfiguration = "automatic",
 				},
 			},
 		},
 		init_options = {
-			bundles = {},
+			bundles = bundles,
 		},
-		-- Add on_attach to set format options
 		on_attach = function(client, bufnr)
-			-- Ensure formatting is enabled
-			if client.server_capabilities.documentFormattingProvider then
-				vim.api.nvim_create_autocmd("BufWritePre", {
-					buffer = bufnr,
-					callback = function()
-						vim.lsp.buf.format({ bufnr = bufnr })
-					end,
-				})
-			end
-		end,
+			local dap = require('dap')
+
+			dap.configurations.java = {
+				{
+					type = 'java',
+					request = 'launch',
+					name = "Debug (Attach) - Remote",
+					hostName = "127.0.0.1",
+					port = 5005,
+				},
+				{
+					type = 'java',
+					request = 'launch',
+					name = "Debug",
+					mainClass = "${file}",
+				},
+			}
+		end
 	}
 
 	print("Full command: " .. table.concat(config.cmd, " "))
