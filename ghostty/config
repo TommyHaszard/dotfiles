@@ -1,0 +1,4 @@
+theme = Monokai Remastered
+font-feature = -calt, -liga, -dlig
+macos-titlebar-style = native
+link-previews = osc8
