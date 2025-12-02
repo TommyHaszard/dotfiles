@@ -18,12 +18,12 @@ function M:setup()
 		return
 	end
 
-	print("Launcher jar: " .. launcher_jar)
-	print("JDTLS Path: " .. jdtls_path)
-	print("Config path: " ..
-		jdtls_path ..
-		package.config:sub(1, 1) ..
-		"config_" .. (os_name == "Windows_NT" and "win" or os_name == "Linux" and "linux" or "mac"))
+	--print("Launcher jar: " .. launcher_jar)
+	--print("JDTLS Path: " .. jdtls_path)
+	--print("Config path: " ..
+		--jdtls_path ..
+		--package.config:sub(1, 1) ..
+		--"config_" .. (os_name == "Windows_NT" and "win" or os_name == "Linux" and "linux" or "mac"))
 
 	local config_dir
 	if os_name == "Linux" then
@@ -40,7 +40,7 @@ function M:setup()
 	if vim.fn.filereadable(format_file) == 0 then
 		vim.notify("Format file not found at: " .. format_file, vim.log.levels.WARN)
 	else
-		print("Using format file: " .. format_file)
+		--print("Using format file: " .. format_file)
 	end
 
 	local bundles = {}
@@ -119,9 +119,9 @@ function M:setup()
 		end
 	}
 
-	print("Full command: " .. table.concat(config.cmd, " "))
-	print("Lombok jar: " .. lombok_jar)
-	print("Format file: " .. format_file)
+	--print("Full command: " .. table.concat(config.cmd, " "))
+	--print("Lombok jar: " .. lombok_jar)
+	--print("Format file: " .. format_file)
 
 	vim.lsp.config("jdtls", config)
 end

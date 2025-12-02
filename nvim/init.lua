@@ -64,13 +64,8 @@ vim.api.nvim_create_autocmd("FileType", {
 
 require('keymaps')
 --require("nvim.lua.custom.plugins.ssh-telescope").setup()
-require("lua.custom.plugins.lazygit").setup()
-require("lua.custom.plugins.lazydocker").setup()
 
 vim.keymap.set("n", "<leader>sd", ":Oil --float<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>ss", require("lua.custom.plugins.ssh-telescope.init").ssh_picker, { desc = "SSH Telescope" })
-vim.keymap.set('n', '<leader>gg', ':LazyGit<CR>', { desc = 'LazyGit' })
-vim.keymap.set('n', '<leader>gd', ':LazyDocker<CR>', { desc = 'LazyDocker' })
 
 vim.keymap.set('n', '<leader>hn', ':Gitsigns next_hunk<CR>', { desc = 'Gitsigns jump to next hunk' })
 vim.keymap.set('n', '<leader>hp', ':Gitsigns next_hunk<CR>', { desc = 'Gitsigns jump to next hunk' })
