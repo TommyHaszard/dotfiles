@@ -63,7 +63,6 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 require('keymaps')
---require("nvim.lua.custom.plugins.ssh-telescope").setup()
 
 vim.keymap.set("n", "<leader>sd", ":Oil --float<CR>", { noremap = true, silent = true })
 
