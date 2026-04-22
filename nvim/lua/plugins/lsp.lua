@@ -38,6 +38,11 @@ return {
 				jdtls = {
 					manual_install = true, -- nvim-java handles the setup
 				},
+				intelephense = {
+					cmd = { "intelephense", "--stdio" },
+					filetypes = { "php" },
+					root_markers = { ".git", "composer.json" },
+				},
 			}
 
 			-- require("ocaml").setup()
@@ -55,7 +60,7 @@ return {
 			local ensure_installed = {
 				"stylua",
 				"lua_ls",
-				-- "tailwind-language-server",
+				"tailwind-language-server",
 			}
 
 			vim.list_extend(ensure_installed, servers_to_install)
